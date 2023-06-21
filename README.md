@@ -1,4 +1,4 @@
-## Desription:
+# Desription:
 SimpleBMI is a lightweight web application that calculates your Body Mass Index (BMI) based on your height and weight. It provides a quick and convenient way
 <img src="https://cdn-icons-png.flaticon.com/128/2117/2117130.png" alt="Icon Description" align="right" style="margin-left: 20px;"> 
 to assess your body composition and determine whether you fall into underweight, normal weight, overweight, or obese categories.
