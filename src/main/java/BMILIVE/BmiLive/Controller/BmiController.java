@@ -14,7 +14,7 @@ public class BmiController {
         @GetMapping("/bmi")
         public String showBMIForm(Model model) {
             model.addAttribute("heightWeight", new Height_and_Weight());
-            model.addAttribute("bmi", null); // Initialize BMI as null
+            model.addAttribute("bmi", null);
             return "bmi-form";
         }
 
@@ -28,7 +28,7 @@ public class BmiController {
             model.addAttribute("bmi", bmi);
             return "bmi-form";
         }
-//    weight (lb) / [height (in)]2 x 703
+
     @PostMapping("/calculate-bmi-2")
     public String calculateBmiHeightAndWeight(@ModelAttribute("heightWeight") Height_and_Weight heightAndWeight,Model model){
             double height = heightAndWeight.getHeight();
