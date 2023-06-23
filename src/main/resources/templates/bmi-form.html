@@ -57,11 +57,23 @@
             text-align: center;
             margin-top: 20px;
         }
+
+        .toggle-button {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
 <h1>BMI Calculator</h1>
-<form action="#" th:action="@{/calculate-bmi}" th:object="${heightWeight}" method="post">
+
+<div class="toggle-button">
+    <button onclick="toggleForm('form1')">Use Kilograms & Meters</button>
+    <button onclick="toggleForm('form2')">Use Pounds & Inches</button>
+</div>
+
+<form id="form1" action="#" th:action="@{/calculate-bmi}" th:object="${heightWeight}" method="post">
     <label for="height">Height (in meters):</label>
     <input type="text" id="height" th:field="*{height}" required>
     <br>
@@ -71,6 +83,31 @@
     <button type="submit">Calculate BMI</button>
 </form>
 
-<h2 th:if="${bmi != null}">Your BMI: <span th:text="${bmi}"></span></h2>
+<form id="form2" style="display: none;" action="/calculate-bmi-2" method="post">
+    <label for="height-inches">Height (in inches):</label>
+    <input type="text" id="height-inches" name="height" required>
+    <br>
+    <label for="weight-lbs">Weight (in pounds):</label>
+    <input type="text" id="weight-lbs" name="weight" required>
+    <br>
+    <button type="submit">Calculate BMI</button>
+</form>
+
+<h2 th:if="${bmi != null}">Your BMI is: <span th:text="${bmi}"></span></h2>
+
+<script>
+    function toggleForm(formId) {
+        const forms = document.querySelectorAll('form');
+        forms.forEach(form => {
+            if (form.id === formId) {
+                form.style.display = 'block';
+            } else {
+                form.style.display = 'none';
+            }
+        });
+    }
+</script>
+
 </body>
 </html>
+
