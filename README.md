@@ -26,4 +26,8 @@ to assess your body composition and determine whether you fall into underweight,
 3. Make your changes and ensure that the code is properly tested.
 4. Commit your changes and push them to your forked repository.
 5. Submit a pull request to the main repository, explaining the changes you have made.
+
+### Image provided by <a href="https://www.flaticon.com/free-icons/bmi" title="bmi icons">Bmi icons created by DailyPm Studio - Flaticon</a>
+
+
                                          
