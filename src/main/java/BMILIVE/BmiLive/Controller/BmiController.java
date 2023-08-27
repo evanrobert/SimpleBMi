@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 public class BmiController {
 
 
-        @GetMapping("/bmi")
+        @GetMapping("/")
         public String showBMIForm(Model model) {
             model.addAttribute("heightWeight", new Height_and_Weight());
             model.addAttribute("bmi", null);
