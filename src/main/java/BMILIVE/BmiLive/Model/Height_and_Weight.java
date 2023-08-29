@@ -11,8 +11,8 @@ import lombok.Setter;
 @Setter
 public class Height_and_Weight {
 
-        private double height;
-        private double weight;
+        public double height;
+       public double weight;
     }
 
 
