@@ -9,6 +9,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 public class BmiController {
+    /**
+     * Need to fix BMI metric calculation, from meters, to Centimeters and kilograms.
+     *
+     */
 
 
         @GetMapping("/")
