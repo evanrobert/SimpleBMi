@@ -34,13 +34,15 @@ public class BmiController {
             model.addAttribute("bmi", bmi);
             return "bmi-form";
         }
-
     /**
-     * Takes in a users height in inches and weight in LBS and calculates the results.
-     * @param heightAndWeight
-     * @param model
-     * @return
+     * Calculates the Body Mass Index (BMI) based on a user's height and weight.
+     *
+     * @param heightAndWeight An instance of the Height_and_Weight class containing the user's height and weight.
+     * @param model The BMI model used for the calculation.
+     * @return A string representing the BMI value and its interpretation.
      */
+
+
     @PostMapping("/calculate/bmi/height/weight")
     public String calculateBmiByHeightAndWeight(@ModelAttribute("heightWeight") Height_and_Weight heightAndWeight,Model model){
             double height = heightAndWeight.getHeight();
