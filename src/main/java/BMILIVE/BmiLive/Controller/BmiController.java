@@ -35,8 +35,8 @@ public class BmiController {
             return "bmi-form";
         }
 
-    @PostMapping("/calculate-bmi-2")
-    public String calculateBmiHeightAndWeight(@ModelAttribute("heightWeight") Height_and_Weight heightAndWeight,Model model){
+    @PostMapping("/calculate/bmi/height/weight")
+    public String calculateBmiByHeightAndWeight(@ModelAttribute("heightWeight") Height_and_Weight heightAndWeight,Model model){
             double height = heightAndWeight.getHeight();
             double weight = heightAndWeight.getWeight();
         double bmi = (weight / (height * height)) * 703;
