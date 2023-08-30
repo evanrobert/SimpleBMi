@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 public class BmiController {
     /**
      * Need to fix BMI metric calculation, from meters, to Centimeters and kilograms.
-     *
+     * Rounding is completed.
      */
 
 
@@ -35,6 +35,12 @@ public class BmiController {
             return "bmi-form";
         }
 
+    /**
+     * Takes in a users height in inches and weight in LBS and calculates the results.
+     * @param heightAndWeight
+     * @param model
+     * @return
+     */
     @PostMapping("/calculate/bmi/height/weight")
     public String calculateBmiByHeightAndWeight(@ModelAttribute("heightWeight") Height_and_Weight heightAndWeight,Model model){
             double height = heightAndWeight.getHeight();
