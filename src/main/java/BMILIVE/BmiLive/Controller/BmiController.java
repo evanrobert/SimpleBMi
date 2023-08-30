@@ -27,7 +27,9 @@ public class BmiController {
             double height = heightWeight.getHeight();
             double weight = heightWeight.getWeight();
 
+
             double bmi = weight / (height * height);
+            bmi = Math.round(bmi * 10) / 10.0;
 
             model.addAttribute("bmi", bmi);
             return "bmi-form";
@@ -38,6 +40,7 @@ public class BmiController {
             double height = heightAndWeight.getHeight();
             double weight = heightAndWeight.getWeight();
         double bmi = (weight / (height * height)) * 703;
+        bmi = Math.round(bmi);
             model.addAttribute("bmi",bmi);
             return "bmi-form";
             }
